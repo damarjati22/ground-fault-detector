@@ -1,0 +1,30 @@
+
+{
+  "project_info": {
+    "project_number": "1078930920484",
+    "project_id": "ground-fault-detector",
+    "storage_bucket": "ground-fault-detector.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078930920484:android:d16c76f1f4b8473f68b4b1",
+        "android_client_info": {
+          "package_name": "com.damaru.groundfault"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpTYDWFsmPFFu2IayOYeUuTNlXPClZ9Kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
