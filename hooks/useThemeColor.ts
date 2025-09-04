@@ -1,21 +1,27 @@
-/**
- * Learn more about light and dark modes:
- * https://docs.expo.dev/guides/color-schemes/
- */
+import { useTheme } from "@/constants/theme";
 
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+type Colors = {
+  light?: string;
+  dark?: string;
+};
 
 export function useThemeColor(
-  props: { light?: string; dark?: string },
-  colorName: keyof typeof Colors.light & keyof typeof Colors.dark
+  props: Colors,
+  colorName: "text" | "background" = "text"
 ) {
-  const theme = useColorScheme() ?? 'light';
-  const colorFromProps = props[theme];
+  const { theme } = useTheme();
 
-  if (colorFromProps) {
-    return colorFromProps;
-  } else {
-    return Colors[theme][colorName];
-  }
+  // Warna default
+  const colorPalette = {
+    light: {
+      text: "#000000",
+      background: "#ffffff",
+    },
+    dark: {
+      text: "#ffffff",
+      background: "#000000",
+    },
+  };
+
+  return props[theme] ?? colorPalette[theme][colorName];
 }
